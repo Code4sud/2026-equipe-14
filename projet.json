@@ -1,10 +1,23 @@
 {
-  "nom": "Nom du projet",
-  "pitch": "Une phrase qui dit ce que fait le projet.",
-  "description": "Premier paragraphe : le problème que vous résolvez.\n\nDeuxième paragraphe : comment ça marche, et ce que vous avez construit en trois jours.",
-  "ecoles": ["École 1", "École 2"],
-  "stack": ["HTML", "JavaScript"],
-  "demo": "",
+  "nom": "Agora Explorer",
+  "pitch": "Des jeux narratifs pour découvrir un métier de l'intérieur : tu vis une soirée de barman ou une journée de chef de projet systèmes embarqués, et chacun de tes choix change la suite.",
+  "description": "Choisir une orientation sans jamais avoir vu un métier en vrai, c'est difficile : les fiches métiers décrivent des missions, mais pas ce qu'on vit quand le bar se remplit ou qu'une puce électronique a six mois de retard.\n\nAgora Explorer met le jeune en situation. Depuis l'accueil, il cherche un métier ou parcourt les familles de métiers, lit une fiche courte (missions, qualités, formation, conditions de travail), puis joue en style rétro pixel art : une soirée complète de barman, ou la création d'un robot de cuisine comme chef de projet systèmes embarqués, du brief client au service après-vente, avec quatre jauges à préserver (client, équipe, budget, délai). Chaque choix change la suite et la fin de la partie. Un collègue virtuel répond ensuite aux questions sur le métier. Tout fonctionne dans le navigateur, sans compte et sans envoyer de données.",
+  "ecoles": [
+    "CESI",
+    "Centrale Méditerranée"
+  ],
+  "stack": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "demo": "https://code4sud.github.io/2026-equipe-14/",
   "video": "",
-  "captures": []
+  "captures": [
+    "captures/accueil.jpg",
+    "captures/chef-projet-infos.jpg",
+    "captures/chef-projet-jeu.jpg",
+    "captures/scene.jpg",
+    "captures/fin-et-chat.jpg"
+  ]
 }
