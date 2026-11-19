@@ -1,0 +1,25 @@
+{
+  "nom": "Agora Explorer",
+  "pitch": "Des jeux narratifs pour découvrir un métier de l'intérieur : barman, chef de projet systèmes embarqués, médecin généraliste, technicien de traitement des eaux, chargé de marketing ou chauffeur routier. Chacun de tes choix change la suite.",
+  "description": "Choisir une orientation sans jamais avoir vu un métier en vrai, c'est difficile : les fiches métiers décrivent des missions, mais pas ce qu'on vit quand le bar se remplit, qu'une pompe tombe en panne ou qu'un patient présente un signe d'alerte.\n\nAgora Explorer met le jeune en situation. Depuis l'accueil, il choisit une famille de métiers ou recherche un métier, lit une fiche courte (missions, qualités, formation, conditions de travail, salaire médian issu d'Orientation Région Sud), puis joue en style rétro pixel art, avec une musique propre à chaque famille. Six métiers sont jouables, un par famille : barman, chef de projet systèmes embarqués, médecin généraliste, technicien de traitement des eaux, chargé de marketing et chauffeur routier. Chaque choix change la suite et la fin de la partie, puis un collègue virtuel répond aux questions sur le métier. Tout fonctionne dans le navigateur, sans compte et sans envoyer de données.",
+  "ecoles": [
+    "CESI",
+    "Centrale Méditerranée"
+  ],
+  "stack": [
+    "HTML",
+    "CSS",
+    "JavaScript"
+  ],
+  "demo": "https://code4sud.github.io/2026-equipe-14/",
+  "video": "",
+  "captures": [
+    "captures/accueil.jpg",
+    "captures/chef-projet-infos.jpg",
+    "captures/chef-projet-jeu.jpg",
+    "captures/medecin-examen.jpg",
+    "captures/scene.jpg",
+    "captures/fin-bilan.jpg",
+    "captures/fin-et-chat.jpg"
+  ]
+}
