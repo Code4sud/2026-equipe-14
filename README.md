@@ -6,10 +6,10 @@ Projet réalisé à Nice les 18, 19 et 20 novembre 2026, sur le thème **« L'or
 
 Les jeunes choisissent souvent une orientation sans avoir vu un métier de l'intérieur. **Agora Explorer** les met en situation : après une courte fiche sur le métier (missions, qualités, formation, conditions de travail), on joue une partie où chaque décision change la suite. À la fin, un collègue virtuel répond aux questions sur le métier. Pour les 16-25 ans qui cherchent leur voie.
 
-- Deux métiers jouables : **barman** (une soirée au bar, 16 scènes) et **chef de projet systèmes embarqués** (une journée pour créer un robot de cuisine, 8 étapes et 4 jauges : client, équipe, budget, délai).
+- Six métiers jouables, un par famille : **barman**, **chef de projet systèmes embarqués**, **médecin généraliste**, **technicien de traitement des eaux**, **chargé de marketing** et **chauffeur routier**.
 - 2 ou 3 choix par scène (souris ou touches **1**, **2**, **3**), organisés en arbre de décision ; l'état du jeu évolue selon les choix et décide de la fin.
 - Tout tourne dans le navigateur : pas de compte, aucune donnée envoyée.
-- Jeu en style rétro pixel art (décors SVG pixelisés automatiquement), mode clair et mode sombre.
+- Jeu en style rétro pixel art (décors SVG pixelisés automatiquement), musique chiptune originale par famille de métiers, mode clair et mode sombre.
 
 ## Organisation du code
 
@@ -19,14 +19,14 @@ css/style.css         style commun ; couleurs des thèmes clair et sombre en var
 js/theme.js           mode clair / sombre, mémorisé dans le navigateur
 js/dom.js             petits utilitaires partagés
 js/illustrations.js   moteur des décors : SVG pixelisé, personnages
-js/scenes/*.js        décors de chaque métier (bar, bureau d'études)
+js/scenes/*.js        décors de chaque métier (bar, bureau, cabinet, station, marketing, routier)
 js/jobs/*.js          contenu de chaque métier : fiche, scènes, choix, fins, réponses du collègue
 js/game.js            moteur du jeu : état, choix, affichage, fin de partie
 js/chat.js            chat avec le collègue virtuel
 js/audio.js           musique en boucle sans blanc, effets sonores, bouton Son
 js/app.js             navigation, recherche, clavier
-assets/               musiques (m4a), effets sonores (sons/), logos
-tools/                prepare-music.py : prépare une nouvelle musique en boucle (macOS)
+assets/               musiques par secteur (m4a), effets sonores (sons/), logos
+tools/                compose-music.py : compose les musiques de fond ; prepare-music.py : met une musique externe en boucle (macOS)
 ```
 
 Ajouter un métier : créer `js/jobs/<metier>.js` sur le modèle de `barman.js` (et ses décors dans `js/scenes/`), charger les fichiers dans `index.html`, l'ajouter à `JOBS` et à son secteur dans `SECTORS` (`js/app.js`), puis à la liste testée dans `tests/jobs.test.js`.
