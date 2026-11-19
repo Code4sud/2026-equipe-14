@@ -97,17 +97,21 @@
   </div>
 
   <div class="screen" id="intro" role="region" aria-label="Accueil">
-    <div class="partners" aria-label="Partenaires du projet">
-      <a class="partnerLogo" href="https://nice.cesi.fr/" target="_blank" rel="noopener" title="Site de CESI (nouvel onglet)"><img src="assets/logos/cesi.png" width="240" height="114" alt="Site de CESI (nouvel onglet)"></a>
-      <a class="partnerLogo" href="https://www.centrale-mediterranee.fr/fr" target="_blank" rel="noopener" title="Site de Centrale Méditerranée (nouvel onglet)"><img src="assets/logos/centrale-mediterranee.png" width="240" height="81" alt="Site de Centrale Méditerranée (nouvel onglet)"></a>
-      <a class="partnerLogo dark" href="https://centredespossibles.org/" target="_blank" rel="noopener" title="Site de Centre des Possibles (nouvel onglet)"><img src="assets/logos/centre-des-possibles.png" width="240" height="80" alt="Site de Centre des Possibles (nouvel onglet)"></a>
-      <a class="partnerLogo" href="https://www.nicecotedazur.org/" target="_blank" rel="noopener" title="Site de Métropole Nice Côte d’Azur (nouvel onglet)"><img src="assets/logos/metropole-nice.png" width="240" height="86" alt="Site de Métropole Nice Côte d’Azur (nouvel onglet)"></a>
-    </div>
-
     <div class="introTools">
+      <button class="control" type="button" popovertarget="partnersPanel"><svg class="icon"><use href="#i-users"/></svg>Partenaires</button>
       <button class="control themeToggle" type="button" aria-label="Changer de thème" title="Mode clair / sombre">
         <svg class="icon i-moon"><use href="#i-moon"/></svg><svg class="icon i-sun"><use href="#i-sun"/></svg>
       </button>
+    </div>
+
+    <div class="partnersPanel" id="partnersPanel" popover aria-labelledby="partnersTitle">
+      <h2 id="partnersTitle">Nos partenaires</h2>
+      <div class="partners">
+        <a class="partnerLogo" href="https://nice.cesi.fr/" target="_blank" rel="noopener" title="Site de CESI (nouvel onglet)"><img src="assets/logos/cesi.png" width="240" height="114" alt="Site de CESI (nouvel onglet)"></a>
+        <a class="partnerLogo" href="https://www.centrale-mediterranee.fr/fr" target="_blank" rel="noopener" title="Site de Centrale Méditerranée (nouvel onglet)"><img src="assets/logos/centrale-mediterranee.png" width="240" height="81" alt="Site de Centrale Méditerranée (nouvel onglet)"></a>
+        <a class="partnerLogo dark" href="https://centredespossibles.org/" target="_blank" rel="noopener" title="Site de Centre des Possibles (nouvel onglet)"><img src="assets/logos/centre-des-possibles.png" width="240" height="80" alt="Site de Centre des Possibles (nouvel onglet)"></a>
+        <a class="partnerLogo" href="https://www.nicecotedazur.org/" target="_blank" rel="noopener" title="Site de Métropole Nice Côte d’Azur (nouvel onglet)"><img src="assets/logos/metropole-nice.png" width="240" height="86" alt="Site de Métropole Nice Côte d’Azur (nouvel onglet)"></a>
+      </div>
     </div>
 
     <div class="welcomeGlow glowOne"></div>
@@ -146,11 +150,29 @@
 
       <form class="welcomeSearch" id="searchForm" autocomplete="off">
         <svg class="icon"><use href="#i-search"/></svg>
-        <input id="searchInput" type="search" placeholder="Ou recherche un métier…" aria-label="Rechercher un métier" spellcheck="false">
-        <button type="submit" aria-label="Lancer le métier" title="Lancer le métier"><svg class="icon"><use href="#i-arrow-right"/></svg></button>
+        <input id="searchInput" type="search" placeholder="Un métier, ou ce que tu aimes…" aria-label="Rechercher un métier ou demander conseil" spellcheck="false">
+        <button type="submit" aria-label="Envoyer" title="Envoyer"><svg class="icon"><use href="#i-arrow-right"/></svg></button>
       </form>
       <div class="introError hidden" id="searchError" role="status" aria-live="polite"></div>
     </div>
+  </div>
+
+  <div class="screen hidden" id="guide" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+    <section class="sectorPage guidePage">
+      <button type="button" class="btn" id="guideBack"><svg class="icon"><use href="#i-arrow-left"/></svg>Retour à l’accueil</button>
+      <div class="chat">
+        <div class="chatHead">
+          <strong id="guideTitle"><svg class="icon"><use href="#i-chat"/></svg>Guide d’orientation</strong>
+          <span class="small">Quelques questions, puis les métiers qui te correspondent.</span>
+        </div>
+        <div class="chatLog" id="guideLog" aria-live="polite"></div>
+        <div class="guideChoices" id="guideChoices"></div>
+        <form class="chatForm" id="guideForm" autocomplete="off">
+          <input id="guideInput" data-autofocus placeholder="Ou écris ta réponse…" aria-label="Ta réponse">
+          <button type="submit" aria-label="Envoyer"><svg class="icon"><use href="#i-send"/></svg></button>
+        </form>
+      </div>
+    </section>
   </div>
 
   <div class="screen hidden" id="sectorSelect" role="dialog" aria-modal="true" aria-label="Choisir un métier">
@@ -251,6 +273,7 @@
   <script src="js/jobs/chauffeur-routier.js"></script>
   <script src="js/game.js"></script>
   <script src="js/chat.js"></script>
+  <script src="js/guide.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

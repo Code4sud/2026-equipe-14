@@ -46,7 +46,7 @@ const SECTORS = {
   },
 };
 
-const SCREENS = ['intro', 'sectorSelect', 'jobInfo', 'ending'];
+const SCREENS = ['intro', 'guide', 'sectorSelect', 'jobInfo', 'ending'];
 
 let selectedJob = null;
 
@@ -140,16 +140,14 @@ function showSearchError(message) {
 
 $('searchForm').addEventListener('submit', event => {
   event.preventDefault();
-  const query = normalize($('searchInput').value.trim());
+  const text = $('searchInput').value.trim();
+  const query = normalize(text);
   const jobId = Object.keys(JOBS).find(id => JOBS[id].keywords.test(query));
   const sectorKey = Object.keys(SECTORS).find(key => SECTORS[key].keywords.test(query));
 
   if (query && jobId) openJobInfo(jobId);
   else if (query && sectorKey) openSector(sectorKey);
-  else {
-    showSearchError('Métier non disponible pour le moment. Essaie « barman », « médecin », « marketing », « eau » ou « chauffeur ».');
-    $('searchInput').focus();
-  }
+  else openGuide(text);
 });
 
 document.querySelectorAll('.sectorCard').forEach(card => {

@@ -10,12 +10,10 @@ function answer(question) {
   return typeof rule.reply === 'function' ? rule.reply(state) : rule.reply;
 }
 
-function say(text, fromPlayer = false) {
+function say(text, fromPlayer = false, log = $('chatLog')) {
   const bubble = document.createElement('div');
   bubble.className = fromPlayer ? 'bubble you' : 'bubble';
   bubble.textContent = text;
-
-  const log = $('chatLog');
   log.appendChild(bubble);
   log.scrollTop = log.scrollHeight;
 }
