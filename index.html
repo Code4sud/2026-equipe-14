@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Agora Explorer — Découvre un métier</title>
+  <title>Agora Explorer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script src="https://orientation.code4sud.fr/bandeau.js" data-equipe="14" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,20 +99,45 @@
 
   <div class="screen" id="intro" role="region" aria-label="Accueil">
     <div class="introTools">
-      <button class="control" type="button" popovertarget="partnersPanel"><svg class="icon"><use href="#i-users"/></svg>Partenaires</button>
+      <button class="control" type="button" popovertarget="partnersPanel"><svg class="icon"><use href="#i-users"/></svg>Partenaires et infos</button>
       <button class="control themeToggle" type="button" aria-label="Changer de thème" title="Mode clair / sombre">
         <svg class="icon i-moon"><use href="#i-moon"/></svg><svg class="icon i-sun"><use href="#i-sun"/></svg>
       </button>
     </div>
 
-    <div class="partnersPanel" id="partnersPanel" popover aria-labelledby="partnersTitle">
-      <h2 id="partnersTitle">Nos partenaires</h2>
+    <div class="popPanel" id="partnersPanel" popover aria-labelledby="partnersTitle">
+      <h2 id="partnersTitle">À propos d’Agora Explorer</h2>
+      <h3>Nos partenaires</h3>
       <div class="partners">
-        <a class="partnerLogo" href="https://nice.cesi.fr/" target="_blank" rel="noopener" title="Site de CESI (nouvel onglet)"><img src="assets/logos/cesi.png" width="240" height="114" alt="Site de CESI (nouvel onglet)"></a>
-        <a class="partnerLogo" href="https://www.centrale-mediterranee.fr/fr" target="_blank" rel="noopener" title="Site de Centrale Méditerranée (nouvel onglet)"><img src="assets/logos/centrale-mediterranee.png" width="240" height="81" alt="Site de Centrale Méditerranée (nouvel onglet)"></a>
-        <a class="partnerLogo dark" href="https://centredespossibles.org/" target="_blank" rel="noopener" title="Site de Centre des Possibles (nouvel onglet)"><img src="assets/logos/centre-des-possibles.png" width="240" height="80" alt="Site de Centre des Possibles (nouvel onglet)"></a>
-        <a class="partnerLogo" href="https://www.nicecotedazur.org/" target="_blank" rel="noopener" title="Site de Métropole Nice Côte d’Azur (nouvel onglet)"><img src="assets/logos/metropole-nice.png" width="240" height="86" alt="Site de Métropole Nice Côte d’Azur (nouvel onglet)"></a>
+        <a class="partnerLogo" href="https://nice.cesi.fr/" target="_blank" rel="noopener" title="Site de CESI (nouvel onglet)"><img src="assets/logos/cesi.svg" width="340" height="166" alt="Site de CESI (nouvel onglet)"></a>
+        <a class="partnerLogo" href="https://www.centrale-mediterranee.fr/fr" target="_blank" rel="noopener" title="Site de Centrale Méditerranée (nouvel onglet)"><img src="assets/logos/centrale-mediterranee.svg" width="345" height="127" alt="Site de Centrale Méditerranée (nouvel onglet)"></a>
+        <a class="partnerLogo dark" href="https://centredespossibles.org/" target="_blank" rel="noopener" title="Site de Centre des Possibles (nouvel onglet)"><img src="assets/logos/centre-des-possibles.png" width="480" height="156" alt="Site de Centre des Possibles (nouvel onglet)"></a>
+        <a class="partnerLogo" href="https://www.nicecotedazur.org/" target="_blank" rel="noopener" title="Site de Métropole Nice Côte d’Azur (nouvel onglet)"><img src="assets/logos/metropole-nice.png" width="336" height="120" alt="Site de Métropole Nice Côte d’Azur (nouvel onglet)"></a>
       </div>
+
+      <h3>Sources</h3>
+      <ul>
+        <li>Fiches métiers, salaires médians (données Insee 2022) et secteurs d’activité : <a href="https://www.orientation-regionsud.fr/metiers" target="_blank" rel="noopener">Orientation Région Sud</a>.</li>
+        <li>Scénarios des jeux : écrits par l’équipe à partir de situations réelles de chaque métier. Illustrations et musiques : créées pour le projet.</li>
+        <li>Le jeu montre un métier de façon simplifiée : pour un vrai conseil, rapproche-toi d’un conseiller d’orientation (CIO, Mission locale, <a href="https://centredespossibles.org/" target="_blank" rel="noopener">Centre des Possibles</a>).</li>
+      </ul>
+
+      <h3>L’intelligence artificielle</h3>
+      <p>Le guide d’orientation et le collègue de fin de partie utilisent une IA (modèle ouvert, via <a href="https://groq.com/" target="_blank" rel="noopener">Groq</a>). Ses réponses sont des pistes, pas un avis officiel : elles peuvent contenir des erreurs. Si l’IA ne répond pas, des réponses préparées par l’équipe prennent le relais.</p>
+
+      <h3>Confidentialité</h3>
+      <ul>
+        <li>Aucun compte, aucun cookie de suivi, aucune publicité. Seul ton choix de thème (clair ou sombre) est mémorisé dans ton navigateur.</li>
+        <li>Ce que tu écris dans le guide ou au collègue est envoyé, par un relais <a href="https://www.cloudflare.com/fr-fr/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a>, à <a href="https://groq.com/privacy-policy/" target="_blank" rel="noopener">Groq</a> pour produire la réponse. L’équipe ne conserve rien. N’écris pas d’informations personnelles (nom, adresse, téléphone…).</li>
+        <li>Le site charge une police de <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Fonts</a> et le bandeau du hackathon <a href="https://orientation.code4sud.fr/" target="_blank" rel="noopener">Code4Sud</a> : ces services reçoivent ton adresse IP, comme pour tout site web.</li>
+      </ul>
+
+      <h3>Mentions légales</h3>
+      <ul>
+        <li>Éditeur et responsable de publication : l’équipe 14 du Hackathon Azuréen #3 (Code4Sud, Nice, 18-20 novembre 2026), étudiants de CESI et de Centrale Méditerranée. Contact : <a href="https://github.com/Code4sud/2026-equipe-14" target="_blank" rel="noopener">dépôt GitHub du projet</a>.</li>
+        <li>Hébergement : GitHub Pages, GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Relais de l’IA : Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis.</li>
+        <li>Code sous licence MIT. Les logos appartiennent à leurs organisations respectives et sont utilisés pour présenter le partenariat.</li>
+      </ul>
     </div>
 
     <div class="welcomeGlow glowOne"></div>
@@ -150,7 +176,7 @@
 
       <form class="welcomeSearch" id="searchForm" autocomplete="off">
         <svg class="icon"><use href="#i-search"/></svg>
-        <input id="searchInput" type="search" placeholder="Un métier, ou ce que tu aimes…" aria-label="Rechercher un métier ou demander conseil" spellcheck="false">
+        <input id="searchInput" type="search" placeholder="Demande à l’IA : un métier, ou ce que tu aimes…" aria-label="Rechercher un métier ou demander conseil" spellcheck="false">
         <button type="submit" aria-label="Envoyer" title="Envoyer"><svg class="icon"><use href="#i-arrow-right"/></svg></button>
       </form>
       <div class="introError hidden" id="searchError" role="status" aria-live="polite"></div>
@@ -212,8 +238,22 @@
         <section><h3>Formation</h3><ul id="infoStudies"></ul></section>
         <section><h3>Conditions de travail</h3><ul id="infoConditions"></ul></section>
       </div>
-      <button type="button" class="btn primary playBtn" id="playBtn" data-autofocus>Commencer le jeu<svg class="icon"><use href="#i-arrow-right"/></svg></button>
+      <button type="button" class="btn primary playBtn" id="playBtn" popovertarget="howToPanel" data-autofocus>Commencer le jeu<svg class="icon"><use href="#i-arrow-right"/></svg></button>
     </article>
+    <div class="popPanel howToPanel" id="howToPanel" popover aria-labelledby="howToTitle">
+      <h2 id="howToTitle">Comment jouer</h2>
+      <ol>
+        <li>Chaque scène te met dans une situation du métier. Choisis ta réponse en cliquant, ou avec les touches <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>.</li>
+        <li>Une bonne réponse fait avancer l’histoire. Une erreur est expliquée en rouge : la réponse se grise et tu en choisis une autre, mais elle compte dans ton bilan.</li>
+        <li>Certains métiers ont des jauges (client, budget, sécurité…). Si l’une tombe à 0 %, la partie s’arrête.</li>
+        <li>« Choix précédent » et « Recommencer » sont à côté des réponses ; le bouton Accueil, à gauche, te ramène au menu.</li>
+        <li>À la fin, tu découvres ton bilan (ce que tu as bien fait, ce qui était à éviter), puis tu peux poser tes questions sur le métier à un collègue, avec l’IA.</li>
+      </ol>
+      <div class="howToActions">
+        <button type="button" class="btn" popovertarget="howToPanel" popovertargetaction="hide">Retour à la fiche</button>
+        <button type="button" class="btn primary" id="howToStart" autofocus>C’est parti<svg class="icon"><use href="#i-arrow-right"/></svg></button>
+      </div>
+    </div>
   </div>
 
   <div class="screen hidden" id="ending" role="dialog" aria-modal="true" aria-label="Fin de partie">

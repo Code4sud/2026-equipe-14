@@ -444,9 +444,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   text-align: center;
 }
 
-.partnersPanel { width: min(720px, calc(100% - 32px)); padding: 36px; border: 1px solid var(--line); border-radius: 28px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow-lg); }
-.partnersPanel::backdrop { background: var(--backdrop); backdrop-filter: blur(8px); }
-.partnersPanel h2 { margin: 0 0 24px; font-size: 28px; letter-spacing: -.02em; text-align: center; }
+.popPanel { width: min(720px, calc(100% - 32px)); padding: 36px; border: 1px solid var(--line); border-radius: 28px; background: var(--surface); color: var(--ink); box-shadow: var(--shadow-lg); max-height: calc(100dvh - 48px); overflow-y: auto; }
+.popPanel::backdrop { background: var(--backdrop); backdrop-filter: blur(8px); }
+.popPanel h2 { margin: 0 0 8px; font-size: 28px; letter-spacing: -.02em; text-align: center; }
+.popPanel h3 { margin: 24px 0 10px; font-size: 17px; }
+.popPanel p, .popPanel ul { margin: 0; font-size: 14px; line-height: 1.55; color: var(--muted); }
+.popPanel ul { padding-left: 18px; }
+.popPanel li + li { margin-top: 6px; }
+.popPanel a:not(.partnerLogo) { color: var(--accent-ink); text-underline-offset: 2px; }
+.howToPanel { width: min(560px, calc(100% - 32px)); }
+.howToPanel ol { margin: 16px 0 0; padding-left: 22px; font-size: 15px; line-height: 1.55; }
+.howToPanel li + li { margin-top: 8px; }
+kbd { padding: 1px 6px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface-2); font: inherit; font-size: .9em; font-weight: 700; }
+.howToActions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 24px; }
 .partners { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .partners .partnerLogo { width: 100%; height: 120px; padding: 18px; border-radius: 18px; }
 .partnerLogo {
@@ -462,7 +472,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   transition: transform .2s ease-out, border-color .2s, box-shadow .2s;
 }
 .partnerLogo.dark { background: #1b1438; }
-.partnerLogo img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.partnerLogo img { display: block; width: 100%; height: 100%; object-fit: contain; }
 
 /* ---------- Cartes (secteurs et métiers) ---------- */
 .sectorGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; width: 100%; }
@@ -741,8 +751,8 @@ a.guideResult { text-decoration: none; }
   .welcomeSearch { margin-top: 14px; }
   #intro { flex-direction: column; align-items: stretch; padding: 16px; }
   .welcomeContent { width: 100%; margin: 0; }
-  .partnersPanel { padding: 22px; }
-  .partnersPanel h2 { font-size: 22px; }
+  .popPanel { padding: 22px; }
+  .popPanel h2 { font-size: 22px; }
   .partners { gap: 10px; }
   .partners .partnerLogo { height: 84px; padding: 10px; }
   .guideResult { grid-template-columns: minmax(0, 1fr) 3.5em; }

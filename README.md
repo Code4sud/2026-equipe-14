@@ -9,7 +9,7 @@ Les jeunes choisissent souvent une orientation sans avoir vu un métier de l'int
 - Six métiers jouables, un par famille : **barman**, **chef de projet systèmes embarqués**, **médecin généraliste**, **technicien de traitement des eaux**, **chargé de marketing** et **chauffeur routier**.
 - 2 ou 3 choix par scène (souris ou touches **1**, **2**, **3**), organisés en arbre de décision ; l'état du jeu évolue selon les choix et décide de la fin.
 - Un guide d'orientation, ouvert depuis la barre de recherche, pose quelques questions puis propose les secteurs d'activité d'Orientation Région Sud qui correspondent, avec un pourcentage, un lien vers les métiers du secteur et le jeu associé quand il existe. Il passe par une IA (modèle ouvert via Groq) ; si elle ne répond pas, un questionnaire local propose les métiers jouables.
-- Pas de compte, aucun nom ni contact demandé. Seules les réponses tapées dans le guide sont envoyées à l'IA, par un relais (`relais/worker.js`, Cloudflare Worker) qui garde la clé secrète : aucune clé dans le site.
+- Pas de compte, aucun nom ni contact demandé. Seul ce qui est tapé dans le guide ou au collègue de fin de partie est envoyé à l'IA, par un relais (`relais/worker.js`, Cloudflare Worker) qui garde la clé secrète : aucune clé dans le site.
 - Jeu en style rétro pixel art (décors SVG pixelisés automatiquement), musique chiptune originale par famille de métiers, mode clair et mode sombre.
 
 ## Organisation du code
@@ -23,7 +23,7 @@ js/illustrations.js   moteur des décors : SVG pixelisé, personnages
 js/scenes/*.js        décors de chaque métier (bar, bureau, cabinet, station, marketing, routier)
 js/jobs/*.js          contenu de chaque métier : fiche, scènes, choix, fins, réponses du collègue
 js/game.js            moteur du jeu : état, choix, affichage, fin de partie
-js/chat.js            chat avec le collègue virtuel
+js/chat.js            chat avec le collègue de fin de partie (IA par le relais, réponses préparées en secours)
 js/guide.js           guide d’orientation : IA par le relais, questionnaire local en secours
 js/audio.js           musique en boucle sans blanc, effets sonores, bouton Son
 js/app.js             navigation, recherche, clavier

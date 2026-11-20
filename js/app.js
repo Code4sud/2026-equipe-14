@@ -141,6 +141,7 @@ function showSearchError(message) {
 $('searchForm').addEventListener('submit', event => {
   event.preventDefault();
   const text = $('searchInput').value.trim();
+  $('searchInput').value = '';
   const query = normalize(text);
   const jobId = Object.keys(JOBS).find(id => JOBS[id].keywords.test(query));
   const sectorKey = Object.keys(SECTORS).find(key => SECTORS[key].keywords.test(query));
@@ -164,7 +165,10 @@ $('jobTiles').addEventListener('click', event => {
 
 $('sectorBack').addEventListener('click', () => showScreen('intro'));
 $('infoBack').addEventListener('click', () => openSector(JOBS[selectedJob].sector));
-$('playBtn').addEventListener('click', () => startJob(selectedJob));
+$('howToStart').addEventListener('click', () => {
+  $('howToPanel').hidePopover();
+  startJob(selectedJob);
+});
 $('homeBtn').addEventListener('click', openHome);
 $('gameHomeBtn').addEventListener('click', openHome);
 $('replayBtn').addEventListener('click', () => startGame());
